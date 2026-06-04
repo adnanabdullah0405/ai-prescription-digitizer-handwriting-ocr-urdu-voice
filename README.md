@@ -25,32 +25,14 @@
 
 ---
 
-## 🏗️ System Architecture
+## 🏗️ LangGraph Pipeline Architecture
 
-```mermaid
-graph TD
-    A[📸 Photo of Handwritten Prescription] --> B[FastAPI Endpoint]
-    B --> C[GPT-4o Vision]
-    C --> D[OCR + Handwriting Recognition]
-    D --> E[NER Agent]
-    
-    E --> F[Extract: Medicine Names]
-    E --> G[Extract: Dosage & Frequency]
-    E --> H[Extract: Doctor Instructions]
-    
-    F --> I[Structured Data Builder]
-    G --> I
-    H --> I
-    
-    I --> J[PDF Generator]
-    I --> K[ElevenLabs TTS]
-    
-    J --> L[📄 Structured Digital PDF]
-    K --> M[🎙️ Urdu Voice Summary]
-    
-    L --> N[Patient Delivery]
-    M --> N
-```
+![System Architecture](architecture/system-architecture.png)
+
+> **Smart 8-step pipeline** — validates image quality first, then 
+> structures data, generates Urdu summary, renders PDF, cleans 
+> voice text, synthesizes voice, and finalizes output. Rejects 
+> gracefully if prescription cannot be processed.
 
 ---
 
@@ -107,20 +89,24 @@ sequenceDiagram
 
 ---
 
-## 📸 Sample Results
+## 📊 Sample Results
 
-> Screenshots and sample outputs coming soon
+### 🖼️ Prescription Comparison — Handwritten vs Digital Output
+![Prescription Comparison](results/prescription_comparison_arrow.png)
 
----
+### 📄 Generated Digital PDF
+[View Prescription Output PDF](results/prescription_output%20(1).pdf)
 
-## 🎥 Demo Video
-
-> Demo video coming soon
+### 🎙️ Urdu Voice Summary
+> 🔊 [Listen to Urdu Voice Summary](results/urdu_summary.mp3)
+>
+> *AI-generated Urdu audio reading of the prescription — 
+> making doctor instructions accessible to low-literacy patients*
 
 ---
 
 > ⚠️ **Note:** This repository showcases the architecture and 
-> design of a production system built at Oladoc. Source code 
+> design of a production system. Source code 
 > is proprietary.
 
 ---
