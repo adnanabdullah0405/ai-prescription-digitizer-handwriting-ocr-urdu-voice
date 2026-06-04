@@ -1,4 +1,4 @@
-# 📋 Handwritten Prescription Digitizer — GPT-4o Vision + Urdu Voice
+# 📋 Handwritten Prescription Digitizer — Vision OCR + Urdu Voice
 
 > **Production AI pipeline** that converts handwritten doctor 
 > prescriptions into structured digital PDFs with Urdu voice 
