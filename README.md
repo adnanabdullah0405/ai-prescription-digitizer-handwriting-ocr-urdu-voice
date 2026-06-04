@@ -27,7 +27,7 @@
 
 ## 🏗️ LangGraph Pipeline Architecture
 
-![System Architecture](architecture/system architecture.png)
+![System Architecture](architecture/system%20architecture.png)
 
 > **Smart 8-step pipeline** — validates image quality first, then 
 > structures data, generates Urdu summary, renders PDF, cleans 
